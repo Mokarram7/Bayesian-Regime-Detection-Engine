@@ -40,10 +40,8 @@ class BayesianPipeline:
 
         self.dashboard = Dashboard()
 
-    ############################################################
-    # Run Complete Pipeline
-    ############################################################
 
+    # Run Complete Pipeline
     def run(self):
 
         logger.info("=" * 70)

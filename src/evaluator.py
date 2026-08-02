@@ -25,10 +25,8 @@ class Evaluator:
             "evaluation_report.txt"
         )
 
-    ############################################################
-    # Load Dataset
-    ############################################################
 
+    # Load Dataset
     def load_dataset(self):
 
         logger.info(
@@ -45,10 +43,8 @@ class Evaluator:
 
         return df
 
-    ############################################################
-    # Regime Distribution
-    ############################################################
 
+    # Regime Distribution
     def regime_distribution(
         self,
         df
@@ -70,10 +66,8 @@ class Evaluator:
 
         return regime
 
-    ############################################################
+    
     # Confidence Summary
-    ############################################################
-
     def confidence_summary(
         self,
         df
@@ -92,10 +86,8 @@ class Evaluator:
         )
 
         return confidence
-        ############################################################
-    # Risk Summary
-    ############################################################
 
+    # Risk Summary
     def risk_summary(
         self,
         df
@@ -115,10 +107,8 @@ class Evaluator:
 
         return risk
 
-    ############################################################
-    # Coverage Summary
-    ############################################################
 
+    # Coverage Summary
     def coverage_summary(
         self,
         df
@@ -138,10 +128,8 @@ class Evaluator:
 
         return coverage
 
-    ############################################################
-    # Generate Report
-    ############################################################
 
+    # Generate Report
     def generate_report(
         self,
         regime,
@@ -170,10 +158,8 @@ class Evaluator:
 
         return "\n".join(report)
 
-    ############################################################
-    # Save Report
-    ############################################################
 
+    # Save Report
     def save_report(
         self,
         report
@@ -195,10 +181,8 @@ class Evaluator:
             f"Saved : {self.report_file}"
         )
 
-    ############################################################
-    # Run Pipeline
-    ############################################################
 
+    # Run Pipeline
     def run(self):
 
         logger.info("=" * 70)

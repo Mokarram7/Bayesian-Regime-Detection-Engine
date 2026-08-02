@@ -23,10 +23,8 @@ class BayesianModel:
             "bayesian_regime_data.csv"
         )
 
-    ###########################################################
+    
     # Load Dataset
-    ###########################################################
-
     def load_dataset(self):
 
         logger.info(
@@ -43,10 +41,8 @@ class BayesianModel:
 
         return df
 
-    ###########################################################
+    
     # Prior Probability
-    ###########################################################
-
     def calculate_prior(
         self,
         df
@@ -72,10 +68,8 @@ class BayesianModel:
 
         return prior
 
-    ###########################################################
+    
     # Likelihood
-    ###########################################################
-
     def calculate_likelihood(
         self,
         df
@@ -100,10 +94,8 @@ class BayesianModel:
         )
 
         return likelihood
-        ###########################################################
+        
     # Posterior Probability
-    ###########################################################
-
     def calculate_posterior(
         self,
         prior,
@@ -124,10 +116,8 @@ class BayesianModel:
 
         return posterior
 
-    ###########################################################
+    
     # Confidence Score
-    ###########################################################
-
     def calculate_confidence(
         self,
         posterior
@@ -141,11 +131,9 @@ class BayesianModel:
 
         return confidence
 
-    ###########################################################
+    
     # Uncertainty Score
-    ###########################################################
-
-    def calculate_uncertainty(
+    def calculate_uncertainty(   
         self,
         confidence
     ):
@@ -158,10 +146,8 @@ class BayesianModel:
 
         return uncertainty
 
-    ###########################################################
+    
     # Attach Bayesian Results
-    ###########################################################
-
     def attach_results(
         self,
         df,
@@ -200,10 +186,8 @@ class BayesianModel:
         )
 
         return df
-        ###########################################################
+        
     # Save Dataset
-    ###########################################################
-
     def save_dataset(
         self,
         df
@@ -222,10 +206,8 @@ class BayesianModel:
             f"Saved : {self.output_file}"
         )
 
-    ###########################################################
+    
     # Summary
-    ###########################################################
-
     def summary(
         self,
         posterior
@@ -241,10 +223,8 @@ class BayesianModel:
 
         logger.info("=" * 60)
 
-    ###########################################################
-    # Run Pipeline
-    ###########################################################
 
+    # Run Pipeline
     def run(self):
 
         logger.info("=" * 70)

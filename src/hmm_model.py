@@ -107,10 +107,8 @@ class HMMTrainer:
 
         ]
 
-    ####################################################################
-    # Dataset
-    ####################################################################
 
+    # Dataset
     def load_dataset(self):
 
         logger.info(
@@ -131,10 +129,8 @@ class HMMTrainer:
 
         return df
 
-    ####################################################################
-    # Feature Selection
-    ####################################################################
 
+    # Feature Selection
     def prepare_features(
         self,
         df
@@ -165,10 +161,8 @@ class HMMTrainer:
 
         return X
 
-    ####################################################################
-    # Scaling
-    ####################################################################
 
+    # Scaling
     def scale_features(
         self,
         X
@@ -195,10 +189,8 @@ class HMMTrainer:
         )
 
         return X_scaled
-        ####################################################################
-    # Train Model
-    ####################################################################
 
+    # Train Model
     def train(
         self,
         X_scaled
@@ -218,10 +210,8 @@ class HMMTrainer:
 
         return self.model
 
-    ####################################################################
-    # Save Model
-    ####################################################################
 
+    # Save Model
     def save_model(self):
 
         joblib.dump(
@@ -238,10 +228,8 @@ class HMMTrainer:
 
         )
 
-    ####################################################################
-    # Load Model
-    ####################################################################
 
+    # Load Model
     def load_model(self):
 
         logger.info(
@@ -258,10 +246,8 @@ class HMMTrainer:
 
         return self.model
 
-    ####################################################################
-    # Predict Hidden States
-    ####################################################################
 
+    # Predict Hidden States
     def predict_hidden_states(
         self,
         X_scaled
@@ -281,10 +267,8 @@ class HMMTrainer:
 
         return hidden_states
 
-    ####################################################################
-    # Posterior Probability
-    ####################################################################
 
+    # Posterior Probability
     def predict_probability(
         self,
         X_scaled
@@ -306,9 +290,8 @@ class HMMTrainer:
 
         return probabilities
 
-    ####################################################################
+
     # Transition Matrix
-    ####################################################################
 
     def transition_matrix(self):
 
@@ -342,10 +325,8 @@ class HMMTrainer:
 
         return transition
 
-    ####################################################################
-    # Initial State Probability
-    ####################################################################
 
+    # Initial State Probability
     def initial_probability(self):
 
         probability = pd.DataFrame(
@@ -375,10 +356,8 @@ class HMMTrainer:
         )
 
         return probability
-        ####################################################################
-    # Regime Statistics
-    ####################################################################
 
+    # Regime Statistics
     def regime_statistics(
         self,
         df
@@ -414,10 +393,8 @@ class HMMTrainer:
 
         return stats
 
-    ####################################################################
-    # Attach Hidden States
-    ####################################################################
 
+    # Attach Hidden States
     def attach_regimes(
         self,
         df,
@@ -443,10 +420,8 @@ class HMMTrainer:
 
         return df
 
-    ####################################################################
-    # Save Dataset
-    ####################################################################
 
+    # Save Dataset
     def save_dataset(
         self,
         df
@@ -466,10 +441,8 @@ class HMMTrainer:
             f"Dataset Saved : {output}"
         )
 
-    ####################################################################
-    # Evaluate
-    ####################################################################
 
+    # Evaluate
     def evaluate(
         self,
         df
@@ -491,10 +464,8 @@ class HMMTrainer:
             f"Observations : {len(df)}"
         )
 
-    ####################################################################
-    # Complete Pipeline
-    ####################################################################
 
+    # Complete Pipeline
     def run(self):
 
         logger.info(

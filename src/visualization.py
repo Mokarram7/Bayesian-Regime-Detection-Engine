@@ -21,10 +21,7 @@ class Visualizer:
             "conformal_predictions.csv"
         )
 
-    ############################################################
     # Load Dataset
-    ############################################################
-
     def load_dataset(self):
 
         logger.info(
@@ -41,10 +38,8 @@ class Visualizer:
 
         return df
 
-    ############################################################
-    # Regime Plot
-    ############################################################
 
+    # Regime Plot
     def regime_plot(
         self,
         df
@@ -97,9 +92,8 @@ class Visualizer:
         logger.success(
             "Regime Plot Saved."
         )
-        ############################################################
+
     # Volatility Plot
-    ############################################################
 
     def volatility_plot(
         self,
@@ -137,10 +131,8 @@ class Visualizer:
             "Volatility Plot Saved."
         )
 
-    ############################################################
+    
     # Confidence Plot
-    ############################################################
-
     def confidence_plot(
         self,
         df
@@ -177,10 +169,7 @@ class Visualizer:
             "Confidence Plot Saved."
         )
 
-    ############################################################
     # Return Distribution
-    ############################################################
-
     def return_distribution(
         self,
         df
@@ -218,10 +207,8 @@ class Visualizer:
             "Return Distribution Saved."
         )
 
-    ############################################################
-    # Run Pipeline
-    ############################################################
 
+    # Run Pipeline
     def run(self):
 
         logger.info("=" * 70)

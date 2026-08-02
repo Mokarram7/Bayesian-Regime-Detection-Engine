@@ -27,10 +27,8 @@ class EnsembleModel:
             "ensemble_predictions.csv"
         )
 
-    ############################################################
-    # Load Dataset
-    ############################################################
 
+    # Load Dataset
     def load_dataset(self):
 
         logger.info(
@@ -47,10 +45,8 @@ class EnsembleModel:
 
         return df
 
-    ############################################################
-    # Ensemble Score
-    ############################################################
 
+    # Ensemble Score
     def calculate_ensemble_score(
         self,
         df
@@ -79,10 +75,8 @@ class EnsembleModel:
         )
 
         return df
-        ############################################################
-    # Final Regime
-    ############################################################
 
+    # Final Regime
     def assign_final_regime(
         self,
         df
@@ -120,10 +114,8 @@ class EnsembleModel:
 
         return df
 
-    ############################################################
-    # Risk Score
-    ############################################################
 
+    # Risk Score
     def calculate_risk(
         self,
         df
@@ -143,10 +135,8 @@ class EnsembleModel:
 
         return df
 
-    ############################################################
-    # Confidence Level
-    ############################################################
 
+    # Confidence Level
     def confidence_level(
         self,
         df
@@ -188,10 +178,8 @@ class EnsembleModel:
 
         return df
 
-    ############################################################
-    # Save Dataset
-    ############################################################
 
+    # Save Dataset
     def save_dataset(
         self,
         df
@@ -215,10 +203,7 @@ class EnsembleModel:
 
         )
 
-    ############################################################
     # Run Pipeline
-    ############################################################
-
     def run(self):
 
         logger.info("=" * 70)

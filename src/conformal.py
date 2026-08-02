@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-
 from src.logger import logger
 from src.config import PROCESSED_DATA_DIR
 
@@ -23,10 +22,8 @@ class ConformalPrediction:
             "conformal_predictions.csv"
         )
 
-    ############################################################
+    
     # Load Dataset
-    ############################################################
-
     def load_dataset(self):
 
         logger.info(
@@ -43,10 +40,7 @@ class ConformalPrediction:
 
         return df
 
-    ############################################################
     # Nonconformity Score
-    ############################################################
-
     def calculate_nonconformity(
         self,
         df
@@ -72,10 +66,7 @@ class ConformalPrediction:
 
         return df
 
-    ############################################################
     # Quantile
-    ############################################################
-
     def calculate_quantile(
         self,
         df,
@@ -99,10 +90,8 @@ class ConformalPrediction:
         )
 
         return q
-        ############################################################
-    # Prediction Interval
-    ############################################################
 
+    # Prediction Interval
     def prediction_interval(
         self,
         df,
@@ -130,10 +119,8 @@ class ConformalPrediction:
 
         return df
 
-    ############################################################
-    # Coverage
-    ############################################################
 
+    # Coverage
     def calculate_coverage(
         self,
         df
@@ -165,10 +152,8 @@ class ConformalPrediction:
 
         return df
 
-    ############################################################
-    # Prediction Confidence
-    ############################################################
 
+    # Prediction Confidence
     def prediction_confidence(
         self,
         df
@@ -206,10 +191,8 @@ class ConformalPrediction:
 
         return df
 
-    ############################################################
-    # Save Dataset
-    ############################################################
 
+    # Save Dataset
     def save_dataset(
         self,
         df
@@ -233,10 +216,7 @@ class ConformalPrediction:
 
         )
 
-    ############################################################
     # Run Pipeline
-    ############################################################
-
     def run(self):
 
         logger.info("=" * 70)
