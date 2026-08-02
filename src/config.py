@@ -30,6 +30,7 @@ TRAINED_MODELS_DIR = MODELS_DIR / "trained"
 # Outputs
 # ============================
 
+
 OUTPUTS_DIR = ROOT_DIR / "outputs"
 
 FIGURES_DIR = OUTPUTS_DIR / "figures"
