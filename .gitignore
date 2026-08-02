@@ -9,8 +9,6 @@ data/raw/
 
 models/trained/
 
-outputs/
-
 .ipynb_checkpoints/
 
 .DS_Store

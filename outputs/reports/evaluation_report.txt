@@ -1,0 +1,42 @@
+======================================================================
+Bayesian Regime Detection Evaluation Report
+======================================================================
+
+Regime Distribution
+
+Final_Regime
+Bear           510
+Bull           648
+Correction     310
+Crash           27
+Recovery      1164
+
+
+Confidence Summary
+
+count    2659.000000
+mean       29.971499
+std        13.194703
+min         2.449623
+25%        17.379308
+50%        24.035972
+75%        44.247586
+max        44.247586
+
+
+Risk Summary
+
+count    2659.000000
+mean        0.885744
+std         0.515007
+min         0.316922
+25%         0.605591
+50%         0.766304
+75%         0.995883
+max         5.596263
+
+
+Coverage Summary
+
+Coverage
+1    2659
